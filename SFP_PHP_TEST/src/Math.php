@@ -6,11 +6,11 @@ class Math
 	{
 	$file = fopen("C:\Users\hoodt\Desktop\SFP_PHP_TEST\assets\tabular.csv", "r");
 	while(! feof($file){
-		$array = array_column($file);
-		$avg = array_sum($array(1)) / count($array);
+		$array = fgetcsv($file);		
+		$avg = array_sum($array(1)) / count($array);	//Assign average to variable $avg
 		
-		if ($array(2) == TRUE){
-			echo round($avg, 10);
+		if ($array(2) == TRUE){							//If column ACCEPT is true dispay
+			echo round($avg, 10);						//average to the 10th precision
 		}
 		else{
 			return false;
