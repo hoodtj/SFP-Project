@@ -4,6 +4,8 @@ namespace Sfp{
 	
 class Even
 {
+		//Create function which opens file and assigns it to variable $file
+		//While function grabs arrays from $file
 	function content(){
 	$file = fopen("C:\Users\hoodt\Desktop\SFP_PHP_TEST\assets\numbers.csv", "r");
 		while(! feof($file){
@@ -12,9 +14,7 @@ class Even
 	fclose($file);
 	}
 }
-	$obj = new Even;
-		
-	var_dump($obj);
-	echo count($obj);
+	$obj = new Even;		//Assign class to new variable
+	echo count($obj);		//Display the count of number of arrays
 }
 ?>
